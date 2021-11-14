@@ -1,0 +1,40 @@
+body {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:100vh;
+    background-color: indianred;
+}
+
+.loader {
+    height:80px;
+    width:80px;
+    position: relative;
+    border-radius: 60px;
+    border:3px solid #17cfc6;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    animation:loader-spin 2s linear infinite;
+    display:inline-block;
+    
+}
+
+
+.loader:after {
+    position: absolute;
+    content:'';
+    width:30px;
+    height:30px;
+    top:50%;
+    left:50%;
+    border-radius:60px;
+    border:4px solid #daff00;
+    transform:translate(-50%, -50%);
+}
+
+@keyframes loader-spin {
+    to {
+        transform:rotate(360deg);
+    }
+}
